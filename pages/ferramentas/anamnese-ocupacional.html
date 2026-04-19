@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ferramentas | Meu Site</title>
+<link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+  <header class="topo">
+    <div class="container">
+      <h1>Ferramentas</h1>
+      <p>Formulários e geradores para uso prático</p>
+
+<div id="menu-container"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="bloco">
+      <h2>Assistente de Anamnese Ocupacional</h2>
+      <p class="texto-apoio">
+        Preencha os campos abaixo para gerar um resumo estruturado da anamnese ocupacional.
+      </p>
+
+      <form id="formAnamnese" class="formulario">
+        <div class="campo">
+          <label for="nomePaciente">Nome / identificação</label>
+          <input type="text" id="nomePaciente" placeholder="Ex.: João da Silva" />
+        </div>
+        
+<div class="campo">
+  <label for="empresaSetor">Empresa / setor</label>
+  <input type="text" id="empresaSetor" placeholder="Ex.: hospital, teleatendimento, indústria" />
+  <p class="texto-apoio">Nome da empresa, ramo de atividade ou setor em que atua.</p>
+</div>
+
+<div class="campo">
+  <label for="cnae">CNAE</label>
+  <input type="text" id="cnae" placeholder="Código ou descrição" />
+  <p class="texto-apoio">Classificação da atividade econômica da empresa.</p>
+</div>
+
+<div class="campo">
+  <label for="cbo">CBO</label>
+  <input type="text" id="cbo" placeholder="Código ou descrição" />
+  <p class="texto-apoio">Código ou descrição da ocupação informada.</p>
+</div>
+
+<div class="campo">
+  <label for="ocupacao">Ocupação</label>
+  <input type="text" id="ocupacao" placeholder="Ex.: médico, pedreiro, técnico de enfermagem" />
+  <p class="texto-apoio">Profissão ou ocupação principal informada pelo trabalhador.</p>
+</div>
+
+<div class="campo">
+  <label for="cargo">Cargo contratado</label>
+  <input type="text" id="cargo" placeholder="Ex.: plantonista, operador, auxiliar" />
+  <p class="texto-apoio">Cargo formal ou posição contratual.</p>
+</div>
+
+<div class="campo">
+  <label for="comoFaz">Como faz o trabalho / atividades reais</label>
+  <textarea id="comoFaz" rows="3" placeholder="Descreva o trabalho real"></textarea>
+  <p class="texto-apoio">Descreva as atividades reais, e não apenas o nome do cargo.</p>
+</div>
+
+<div class="campo">
+  <label for="diaTipico">Dia típico de trabalho</label>
+  <textarea id="diaTipico" rows="4" placeholder="Descreva a rotina diária"></textarea>
+  <p class="texto-apoio">Descreva a jornada desde o início até o fim do expediente.</p>
+</div>
+
+        <div class="grid-2">
+          <div class="campo">
+            <label for="frequencia">Com que frequência realiza as tarefas</label>
+            <input type="text" id="frequencia" placeholder="Ex.: diariamente, 3x por semana" />
+          </div>
+
+          <div class="campo">
+            <label for="tempoTrabalho">Há quanto tempo está nesse trabalho</label>
+            <input type="text" id="tempoTrabalho" placeholder="Ex.: 5 anos" />
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="diaTipico">Dia típico de trabalho</label>
+          <textarea id="diaTipico" rows="4" placeholder="Descreva desde o início até o fim da jornada"></textarea>
+        </div>
+
+<div class="campo">
+  <label for="equipamentos">Produtos, equipamentos, ferramentas ou instrumentos utilizados</label>
+  <textarea id="equipamentos" rows="3" placeholder="Ex.: computador, bisturi, solventes, empilhadeira"></textarea>
+  <p class="texto-apoio">Inclua máquinas, ferramentas, produtos químicos, instrumentos e materiais usados na rotina.</p>
+</div>
+
+<div class="campo">
+  <label for="maiorParteTempo">O que faz na maior parte do tempo</label>
+  <textarea id="maiorParteTempo" rows="3" placeholder="Atividade predominante"></textarea>
+  <p class="texto-apoio">Descreva a atividade que ocupa a maior parte da jornada.</p>
+</div>
+
+<div class="campo">
+  <label for="facilDificil">O que considera mais fácil e mais difícil/arriscado</label>
+  <textarea id="facilDificil" rows="3" placeholder="Ex.: fácil..., difícil/arriscado..."></textarea>
+  <p class="texto-apoio">Ajuda a identificar percepção de carga, risco e exigência do trabalho.</p>
+</div>
+
+<div class="campo">
+  <label for="ambiente">Local e condições de trabalho</label>
+  <textarea id="ambiente" rows="3" placeholder="Descreva o ambiente de trabalho"></textarea>
+  <p class="texto-apoio">Espaço físico, ventilação, iluminação, organização, temperatura e condições gerais.</p>
+</div>
+
+<div class="campo">
+  <label>Riscos ocupacionais</label>
+
+  <div class="riscos-grid">
+    <label class="risco-item">
+      <input type="checkbox" value="físicos" class="risco-checkbox" />
+      <span class="risco-texto">Físicos</span>
+      <span class="ajuda-risco" title="Ruído, calor, vibração, radiação, frio">ⓘ</span>
+    </label>
+
+    <label class="risco-item">
+      <input type="checkbox" value="químicos" class="risco-checkbox" />
+      <span class="risco-texto">Químicos</span>
+      <span class="ajuda-risco" title="Poeiras, fumos, vapores, gases, solventes">ⓘ</span>
+    </label>
+
+    <label class="risco-item">
+      <input type="checkbox" value="biológicos" class="risco-checkbox" />
+      <span class="risco-texto">Biológicos</span>
+      <span class="ajuda-risco" title="Vírus, bactérias, fungos, material biológico">ⓘ</span>
+    </label>
+
+    <label class="risco-item">
+      <input type="checkbox" value="ergonômicos" class="risco-checkbox" />
+      <span class="risco-texto">Ergonômicos</span>
+      <span class="ajuda-risco" title="Postura, repetição, esforço físico, carga">ⓘ</span>
+    </label>
+
+    <label class="risco-item">
+      <input type="checkbox" value="mecânicos/acidente" class="risco-checkbox" />
+      <span class="risco-texto">Mecânicos / Acidente</span>
+      <span class="ajuda-risco" title="Máquinas, cortes, quedas, impacto, choque">ⓘ</span>
+    </label>
+
+    <label class="risco-item">
+      <input type="checkbox" value="psicossociais" class="risco-checkbox" />
+      <span class="risco-texto">Psicossociais</span>
+      <span class="ajuda-risco" title="Estresse, metas, sobrecarga, conflitos">ⓘ</span>
+    </label>
+
+    <label class="risco-item">
+      <input type="checkbox" value="específicos" class="risco-checkbox" />
+      <span class="risco-texto">Específicos</span>
+      <span class="ajuda-risco" title="Altura, eletricidade, espaço confinado, hiperbárico">ⓘ</span>
+    </label>
+  </div>
+</div>
+
+<div class="campo">
+  <label for="riscosDetalhe">Outros riscos / detalhes</label>
+  <textarea id="riscosDetalhe" rows="3" placeholder="Detalhes adicionais dos riscos"></textarea>
+  <p class="texto-apoio">Ex.: levantamento de carga, perfurocortantes, solventes, trabalho em altura, eletricidade.</p>
+</div>
+
+<div class="campo">
+  <label for="jornada">Jornada / turno</label>
+  <input type="text" id="jornada" placeholder="Ex.: 12x36, 8h/dia, noturno" />
+  <p class="texto-apoio">Carga horária, tipo de turno e se há rodízio.</p>
+</div>
+
+<div class="campo">
+  <label for="pausas">Pausas</label>
+  <input type="text" id="pausas" placeholder="Ex.: regulares, insuficientes, sem pausa adequada" />
+  <p class="texto-apoio">Descanso, refeição, banheiro e pausas operacionais.</p>
+</div>
+
+<div class="campo">
+  <label for="organizacao">Organização do trabalho e fatores psicossociais</label>
+  <textarea id="organizacao" rows="4" placeholder="Descreva metas, cobrança e relações de trabalho"></textarea>
+  <p class="texto-apoio">Metas, produtividade, pressão, sobrecarga, relação com colegas e chefia, satisfação no trabalho.</p>
+</div>
+
+<div class="campo">
+  <label for="protecao">Proteção e prevenção</label>
+  <textarea id="protecao" rows="3" placeholder="Descreva EPC/EPI e medidas de proteção"></textarea>
+  <p class="texto-apoio">EPC, EPI, disponibilidade, uso, adesão e medidas preventivas existentes.</p>
+</div>
+
+<div class="campo">
+  <label for="impactoSaude">Impacto do trabalho na saúde atual</label>
+  <textarea id="impactoSaude" rows="4" placeholder="Descreva a relação entre trabalho e sintomas"></textarea>
+  <p class="texto-apoio">Relação percebida com o trabalho, melhora em folgas/férias e existência de colegas com queixas semelhantes.</p>
+</div>
+
+<div class="campo">
+  <label for="historiaPregressa">História ocupacional pregressa</label>
+  <textarea id="historiaPregressa" rows="5" placeholder="Descreva trabalhos anteriores e exposições relevantes"></textarea>
+  <p class="texto-apoio">Idade de início do trabalho, empregos anteriores, tempo em cada função, acidentes e doenças ocupacionais prévias.</p>
+</div>
+
+<div class="acoes-formulario">
+  <button type="button" id="btnGerarResumo">Gerar resumo</button>
+  <button type="button" id="btnGerarTextoClinico">Gerar texto clínico</button>
+  <button type="button" id="btnLimparAnamnese" class="btn-secundario">Limpar</button>
+</div>
+      </form>
+    </section>
+
+    <section class="bloco">
+      <h2>Resultado</h2>
+      <p class="texto-apoio">
+        O texto abaixo pode ser copiado, ajustado e usado como base para anotação.
+      </p>
+
+      <textarea id="resultadoAnamnese" rows="18" placeholder="O resumo gerado aparecerá aqui..."></textarea>
+
+      <div class="acoes-formulario">
+        <button type="button" id="btnCopiarResultado">Copiar texto</button>
+        <button type="button" id="btnWhatsappResultado" class="btn-secundario">Abrir no WhatsApp</button>
+      </div>
+    </section>
+<section class="categoria categoria-pessoal">
+  <h2>Outras ferramentas</h2>
+  <p class="texto-apoio">
+    Ferramentas rápidas para apoio à prática clínica geral e ocupacional.
+  </p>
+
+  <div class="grid-links">
+
+    <div class="card-link">
+      <strong>Calculadora de IMC</strong>
+      <span>Índice de Massa Corporal (em breve)</span>
+    </div>
+
+    <div class="card-link">
+      <strong>Função renal (eTFG)</strong>
+      <span>Estimativa da taxa de filtração glomerular (em breve)</span>
+    </div>
+
+    <div class="card-link">
+      <strong>Scores clínicos</strong>
+      <span>Ferramentas de apoio à decisão clínica (em breve)</span>
+    </div>
+
+    <div class="card-link">
+      <strong>Geradores de texto</strong>
+      <span>Modelos rápidos para documentos e registros (em breve)</span>
+    </div>
+
+  </div>
+</section>
+  </main>
+<div id="footer-container"></div>
+<script src="../../js/script.js"></script>
+<script>
+  carregarMenu("ferramentas");
+  carregarFooter();
+</script>
+</body>
+</html>
