@@ -1,5 +1,5 @@
 function carregarHead(titulo = "") {
-  const nomeSite = "Hub Medicina";
+  const nomeSite = "HUB Medicina";
 
   document.title = titulo
     ? `${titulo} | ${nomeSite}`
