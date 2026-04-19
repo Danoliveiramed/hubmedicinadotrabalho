@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meu Site</title>
+
+<link rel="stylesheet" href="/css/style.css" />
+<script src="/js/script.js"></script>
+</head>
+<body>
+
+<header class="topo">
+  <div class="container">
+    <h1>Meu Site</h1>
+    <p>Medicina do trabalho — ferramentas, links e notas</p>
+
+<div id="menu-container"></div>
+
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="bloco">
+    <h2>Acesso rápido</h2>
+
+    <div class="grid-links">
+      <a class="card-link" href="pages/links.html">
+        <strong>Links úteis</strong>
+        <span>NRs, leis e referências</span>
+      </a>
+
+      <a class="card-link" href="pages/notas.html">
+        <strong>Notas</strong>
+        <span>Resumos e consultas rápidas</span>
+      </a>
+
+      <a class="card-link" href="pages/ferramentas.html">
+        <strong>Ferramentas</strong>
+        <span>Geradores e calculadoras</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+<div id="footer-container"></div><script src="js/script.js"></script>
+<script>
+  carregarMenu("inicio");
+  carregarFooter();
+</script>
+</body>
+</html>

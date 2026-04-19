@@ -1,0 +1,319 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fb;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Topo */
+.topo {
+  background: #0f172a;
+  color: #fff;
+  padding: 24px 0;
+  margin-bottom: 24px;
+}
+
+.topo h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.topo p {
+  color: #cbd5e1;
+  margin-bottom: 16px;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #e2e8f0;
+  background: #1e293b;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Blocos */
+.bloco,
+.categoria {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.bloco h2,
+.categoria h2 {
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+}
+
+/* Busca */
+#buscaLinks {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+#buscaLinks:focus {
+  border-color: #2563eb;
+}
+
+/* Texto de apoio */
+.texto-apoio {
+  margin-top: 6px;
+  margin-bottom: 14px;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* Grid */
+.grid-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+}
+
+/* Categorias com destaque lateral */
+.categoria {
+  border-left: 6px solid #cbd5e1;
+}
+
+.categoria-oficial {
+  border-left-color: #2563eb; /* azul */
+}
+
+.categoria-estudo {
+  border-left-color: #7c3aed; /* roxo */
+}
+
+.categoria-pessoal {
+  border-left-color: #475569; /* cinza */
+}
+
+/* Cards */
+.card-link {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-decoration: none;
+  background: #e2e8f0;
+  border: 1px solid transparent;
+  padding: 15px;
+  border-radius: 8px;
+  transition: 0.2s ease;
+  color: #111827;
+}
+
+.card-link:hover {
+  transform: translateY(-2px);
+  border-color: #94a3b8;
+  background: #f8fafc;
+}
+
+.card-link strong {
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+.card-link span {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+/* Classe usada pelo JS */
+.oculto {
+  display: none;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .topo h1 {
+    font-size: 1.6rem;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+}
+
+/* Formulários */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campo label {
+  font-weight: bold;
+  color: #0f172a;
+}
+
+.campo input:not([type="checkbox"]),
+.campo textarea,
+#resultadoAnamnese,
+#resultadoAnamneseGeral {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  outline: none;
+  background: #fff;
+}
+
+.campo input:not([type="checkbox"]):focus,
+.campo textarea:focus,
+#resultadoAnamnese:focus {
+  border-color: #2563eb;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.acoes-formulario {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.acoes-formulario button {
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 0.95rem;
+}
+
+.acoes-formulario button:hover {
+  background: #1d4ed8;
+}
+
+.acoes-formulario .btn-secundario {
+  background: #475569;
+}
+
+.acoes-formulario .btn-secundario:hover {
+  background: #334155;
+}
+
+#resultadoAnamnese {
+  min-height: 320px;
+  resize: vertical;
+}
+
+@media (max-width: 700px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.riscos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.risco-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px 16px;
+  cursor: pointer;
+  font-weight: normal;
+  color: #0f172a;
+  min-height: 56px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.risco-item:hover {
+  background: #eff6ff;
+  border-color: #93c5fd;
+}
+
+.risco-checkbox {
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.risco-texto {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.2;
+   white-space: normal;
+
+}
+
+.ajuda-risco {
+  color: #64748b;
+  cursor: help;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+  .riscos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.rodape {
+  margin-top: 32px;
+  padding: 20px 0;
+  background: #0f172a;
+  color: #cbd5e1;
+}
+
+.rodape p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}

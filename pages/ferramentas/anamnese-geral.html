@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anamnese Geral | Meu Site</title>
+<link rel="stylesheet" href="/css/style.css" />
+<script src="/js/script.js"></script>
+</head>
+<body>
+
+<header class="topo">
+  <div class="container">
+    <h1>Anamnese Geral</h1>
+    <p>Assistente estruturado para avaliação clínica geral</p>
+    <div id="menu-container"></div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="bloco">
+    <h2>Assistente de Anamnese Geral</h2>
+    <p class="texto-apoio">
+      Preencha os campos abaixo para gerar um resumo estruturado ou um texto clínico corrido.
+    </p>
+
+    <form id="formAnamneseGeral" class="formulario">
+      <div class="grid-2">
+        <div class="campo">
+          <label for="agNomePaciente">Nome / identificação</label>
+          <input type="text" id="agNomePaciente" placeholder="Ex.: João da Silva" />
+        </div>
+
+<div class="campo">
+  <label for="agAcompanhante">Acompanhante / responsável</label>
+  <input type="text" id="agAcompanhante" placeholder="Ex.: esposa, mãe, filho" />
+  <p class="texto-apoio">Se estiver sozinho, pode deixar em branco.</p>
+</div>
+      </div>
+
+      <div class="grid-2">
+        <div class="campo">
+          <label for="agIdade">Idade</label>
+          <input type="text" id="agIdade" placeholder="Ex.: 42 anos" />
+        </div>
+
+        <div class="campo">
+          <label for="agSexo">Sexo</label>
+          <input type="text" id="agSexo" placeholder="Ex.: masculino / feminino" />
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="campo">
+          <label for="agProfissao">Profissão</label>
+          <input type="text" id="agProfissao" placeholder="Ex.: professora, pedreiro, aposentado" />
+        </div>
+
+        <div class="campo">
+          <label for="agProcedencia">Procedência</label>
+          <input type="text" id="agProcedencia" placeholder="Ex.: domicílio, UBS, encaminhado, cidade/bairro" />
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="campo">
+          <label for="agQueixaPrincipal">Queixa principal</label>
+          <input type="text" id="agQueixaPrincipal" placeholder="Ex.: dor lombar, tosse, cefaleia" />
+        </div>
+
+        <div class="campo">
+          <label for="agDuracaoQueixa">Duração da queixa</label>
+          <input type="text" id="agDuracaoQueixa" placeholder="Ex.: 3 dias, 2 meses, desde ontem" />
+        </div>
+      </div>
+
+<div class="campo">
+  <label for="agHda">História da doença atual</label>
+  <textarea id="agHda" rows="5" placeholder="Descreva a evolução do quadro"></textarea>
+  <p class="texto-apoio">Início, evolução, localização, intensidade, fatores de melhora/piora e sintomas associados.</p>
+</div>
+
+<div class="campo">
+  <label for="agDorDetalhes">Dor - detalhes complementares (se aplicável)</label>
+  <textarea id="agDorDetalhes" rows="4" placeholder="Detalhes da dor"></textarea>
+  <p class="texto-apoio">Duração, localização, irradiação, intensidade, tipo, fatores desencadeantes, piora/alívio e tratamentos utilizados.</p>
+</div>
+
+<div class="campo">
+  <label for="agSintomasAssociados">Interrogatório sintomatológico / sintomas associados</label>
+  <textarea id="agSintomasAssociados" rows="4" placeholder="Descreva sintomas relevantes"></textarea>
+  <p class="texto-apoio">Geral, cardiovascular, respiratório, gastrointestinal, neurológico e geniturinário.</p>
+</div>
+
+<div class="campo">
+  <label for="agAntecedentes">Antecedentes pessoais</label>
+  <textarea id="agAntecedentes" rows="5" placeholder="Descreva antecedentes relevantes"></textarea>
+  <p class="texto-apoio">Doenças crônicas, cirurgias, traumas, transfusões, alergias, vacinação e gestações quando aplicável.</p>
+</div>
+
+<div class="campo">
+  <label for="agMedicacoes">Medicações em uso</label>
+  <textarea id="agMedicacoes" rows="4" placeholder="Ex.: losartana 50 mg 2x/dia"></textarea>
+  <p class="texto-apoio">Qual, posologia, motivo, adesão, tempo de uso e quem prescreveu.</p>
+</div>
+
+<div class="campo">
+  <label for="agAntecedentesFamiliares">Antecedentes familiares</label>
+  <textarea id="agAntecedentesFamiliares" rows="3" placeholder="Descreva antecedentes familiares"></textarea>
+  <p class="texto-apoio">Quem? O quê? Ex.: pai hipertenso, mãe diabética, câncer na família.</p>
+</div>
+
+<div class="campo">
+  <label for="agHabitosVida">Hábitos de vida</label>
+  <textarea id="agHabitosVida" rows="5" placeholder="Descreva hábitos relevantes"></textarea>
+  <p class="texto-apoio">Tabagismo, etilismo, drogas, atividade física, alimentação, mudança de peso, atividade sexual e viagens recentes.</p>
+</div>
+
+<div class="campo">
+  <label for="agHistoriaSocial">História social / suporte</label>
+  <textarea id="agHistoriaSocial" rows="4" placeholder="Descreva contexto social"></textarea>
+  <p class="texto-apoio">Mora com quem, independência, rede de apoio, condições de moradia, saneamento e contexto familiar.</p>
+</div>
+
+<div class="campo">
+  <label for="agExameFisico">Exame físico</label>
+  <textarea id="agExameFisico" rows="6" placeholder="Descreva os achados do exame"></textarea>
+  <p class="texto-apoio">Estado geral, sinais vitais, peso, altura, IMC, SpO₂, glicemia capilar, auscultas, abdome, pulsos e outros achados.</p>
+</div>
+
+<div class="campo">
+  <label for="agExamesComplementares">Exames complementares relevantes</label>
+  <textarea id="agExamesComplementares" rows="4" placeholder="Descreva exames relevantes"></textarea>
+  <p class="texto-apoio">Laboratoriais, imagem ou outros achados importantes para o caso.</p>
+</div>
+
+      <div class="campo">
+        <label for="agHipotese">Hipótese / impressão clínica inicial</label>
+        <textarea id="agHipotese" rows="3" placeholder="Ex.: lombalgia mecânica, IVAS, cefaleia tensional..."></textarea>
+      </div>
+
+<div class="campo">
+  <label for="agConduta">Conduta / plano</label>
+  <textarea id="agConduta" rows="4" placeholder="Descreva a conduta"></textarea>
+  <p class="texto-apoio">Orientações, exames, prescrição, retorno e encaminhamentos.</p>
+</div>
+
+      <div class="acoes-formulario">
+        <button type="button" id="btnGerarResumoGeral">Gerar resumo</button>
+        <button type="button" id="btnGerarTextoClinicoGeral">Gerar texto clínico</button>
+        <button type="button" id="btnLimparAnamneseGeral" class="btn-secundario">Limpar</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="bloco">
+    <h2>Resultado</h2>
+    <p class="texto-apoio">
+      O texto abaixo pode ser copiado, ajustado e usado como base para anotação clínica.
+    </p>
+
+    <textarea id="resultadoAnamneseGeral" rows="18" placeholder="O resultado aparecerá aqui..."></textarea>
+
+    <div class="acoes-formulario">
+      <button type="button" id="btnCopiarResultadoGeral">Copiar texto</button>
+      <button type="button" id="btnWhatsappResultadoGeral" class="btn-secundario">Abrir no WhatsApp</button>
+    </div>
+  </section>
+</main>
+
+<div id="footer-container"></div>
+
+<script src="../../js/script.js"></script>
+<script>
+  carregarMenu("ferramentas");
+  carregarFooter();
+</script>
+
+</body>
+</html>
