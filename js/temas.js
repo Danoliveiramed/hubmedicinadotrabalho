@@ -50,63 +50,63 @@ const temasTST = [
     numero: 8,
     assunto: "Adicionais Ambientais",
     resumo: "Agente de Apoio Socioeducativo não tem direito ao adicional de insalubridade pelo eventual risco de contato com menores doentes, pois o local não se destina a cuidados de saúde.",
-    link: "",
+    link: "https://www.tst.jus.br/documents/10157/0/IRR+008+%C3%BAltima+vers%C3%A3o+%282%29.pdf/5573407c-e24e-5043-725d-925e052358fe?t=1718316090071",
     categoriaClasse: "categoria-oficial"
   },
   {
     numero: 10,
     assunto: "Adicionais Ambientais",
     resumo: "Não é devida a periculosidade a quem apenas permanece em áreas de uso de aparelho de Raios X móvel sem operá-lo.",
-    link: "",
+    link: "https://www.tst.jus.br/documents/10157/0/IRR010+%281%29.pdf/af9390cb-abe0-1681-d9e8-ffbe0705d109?t=1726685316742",
     categoriaClasse: "categoria-oficial"
   },
   {
     numero: 16,
     assunto: "Adicionais Ambientais",
     resumo: "Agente de Apoio Socioeducativo tem direito ao adicional de periculosidade por atuar exposto à violência física.",
-    link: "",
+    link: "https://www.tst.jus.br/documents/10157/0/IRR016+%281%29.pdf/9b121b5f-c652-2529-2295-986a7fcc68b0?t=1726685450885",
     categoriaClasse: "categoria-oficial"
   },
   {
     numero: 17,
     assunto: "Adicionais Ambientais",
     resumo: "É vedada a cumulação dos adicionais de insalubridade e periculosidade, mesmo que decorrentes de fatos geradores distintos.",
-    link: "",
+    link: "https://www.tst.jus.br/documents/10157/0/IRR017+%281%29.pdf/1f054c1e-aea8-3919-5fb2-0e6f7bf1f46e?t=1726685465430",
     categoriaClasse: "categoria-oficial"
   },
   {
     numero: 79,
     assunto: "Adicionais Ambientais",
     resumo: "Trabalhadores que atuam na área de abastecimento de aeronaves têm direito à periculosidade.",
-    link: "",
+    link: "https://www.tst.jus.br/documents/10157/0/IRR079+%281%29.pdf/0829c4b0-68f8-042a-f0eb-786c2652cc9f?t=1744140399818",
     categoriaClasse: "categoria-oficial"
   },
   {
     numero: 80,
     assunto: "Adicionais Ambientais",
     resumo: "O trabalho em câmaras frigoríficas sem a pausa térmica assegurada por lei gera direito ao adicional de insalubridade.",
-    link: "",
+    link: "https://www.tst.jus.br/documents/10157/0/IRR080+%281%29.pdf/f967768d-6b21-23ce-fec1-8ddaea75eb82?t=1744140535293",
     categoriaClasse: "categoria-oficial"
   },
   {
     numero: 82,
     assunto: "Adicionais Ambientais",
     resumo: "Motoristas que apenas acompanham o abastecimento feito por terceiros não têm direito a periculosidade.",
-    link: "",
+    link: "https://www.tst.jus.br/documents/10157/0/IRR082+%281%29.pdf/e5a7882d-5612-ba73-7f5b-e45237ac5f79?t=1744140710863",
     categoriaClasse: "categoria-oficial"
   },
   {
     numero: 87,
     assunto: "Adicionais Ambientais",
     resumo: "Abastecer empilhadeiras trocando cilindros de gás (GLP) gera periculosidade, mesmo por tempo reduzido.",
-    link: "",
+    link: "https://www.tst.jus.br/documents/10157/0/IRR087+%281%29.pdf/e578c3e1-e2b7-9ba0-c59f-f3f2e8749336?t=1744141246774",
     categoriaClasse: "categoria-oficial"
   },
   {
     numero: 118,
     assunto: "Adicionais Ambientais",
     resumo: "Agentes Comunitários de Saúde têm direito a insalubridade em grau médio, independente de laudo pericial, após a vigência da Lei 13.342/2016.",
-    link: "",
+    link: "https://www.tst.jus.br/documents/10157/0/IRR118.pdf/e78e7ba4-d49d-d12d-fa45-04e514fe44d3?t=1745871800767",
     categoriaClasse: "categoria-oficial"
   },
   {
