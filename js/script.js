@@ -505,9 +505,10 @@ function ativarBuscaTemas() {
       let categoriaTemResultado = false;
 
       cards.forEach((card) => {
-        const textoCard = card.textContent.toLowerCase();
+        const texto = card.textContent.toLowerCase();
+        const numero = String(card.dataset.tema || "").toLowerCase();
 
-        if (textoCard.includes(termo)) {
+        if (termo === "" || texto.includes(termo) || numero.includes(termo)) {
           card.classList.remove("oculto");
           categoriaTemResultado = true;
         } else {
@@ -515,7 +516,7 @@ function ativarBuscaTemas() {
         }
       });
 
-      if (categoriaTemResultado || termo === "") {
+      if (categoriaTemResultado) {
         categoria.classList.remove("oculto");
       } else {
         categoria.classList.add("oculto");
@@ -523,6 +524,7 @@ function ativarBuscaTemas() {
     });
   });
 }
+
 function carregarFooter() {
   const footer = `
     <footer class="rodape">

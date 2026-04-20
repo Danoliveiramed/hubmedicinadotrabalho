@@ -381,3 +381,39 @@ const temasTST = [
     categoriaClasse: "categoria-pessoal"
   }
 ];
+function criarCardTema(tema) {
+  const tag = tema.link ? "a" : "div";
+  const card = document.createElement(tag);
+
+  card.className = "card-link tema-card"; // ESSENCIAL
+  card.dataset.tema = tema.numero;
+  card.dataset.assunto = tema.assunto;
+
+  if (tema.link) {
+    card.href = tema.link;
+    card.target = "_blank";
+    card.rel = "noopener noreferrer";
+  }
+
+  card.innerHTML = `
+    <strong>Tema ${tema.numero}</strong>
+    <span>${tema.resumo}</span>
+  `;
+
+  return card;
+}
+function renderizarTemas() {
+  const container = document.getElementById("temas-container");
+  if (!container || typeof temasTST === "undefined") return;
+
+  container.innerHTML = "";
+
+  const grupos = agruparTemasPorAssunto(temasTST);
+
+  Object.keys(grupos).forEach((assunto) => {
+    // criação das seções...
+  });
+
+  // 👉 ESSENCIAL
+  ativarBuscaTemas();
+}
