@@ -1,7 +1,11 @@
 // Menu
 function carregarMenu(paginaAtual) {
   const menu = `
-    <nav class="menu">
+    <button class="btn-menu" type="button" onclick="alternarMenu()">
+      ☰ Menu
+    </button>
+
+    <nav class="menu" id="menu-principal">
       <a href="/index.html" ${paginaAtual === "inicio" ? "class='ativo'" : ""}>Início</a>
       <a href="/pages/links.html" ${paginaAtual === "links" ? "class='ativo'" : ""}>Links</a>
       <a href="/pages/temas.html" ${paginaAtual === "temas" ? "class='ativo'" : ""}>Temas</a>
@@ -11,6 +15,13 @@ function carregarMenu(paginaAtual) {
   `;
 
   document.getElementById("menu-container").innerHTML = menu;
+}
+
+function alternarMenu() {
+  const menu = document.getElementById("menu-principal");
+  if (menu) {
+    menu.classList.toggle("menu-aberto");
+  }
 }
 
 // Busca simples nos cards de links
