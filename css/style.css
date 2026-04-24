@@ -317,3 +317,32 @@ body {
   font-size: 0.95rem;
   line-height: 1.6;
 }
+
+/* css botao menu celular*/
+
+.btn-menu {
+  display: none;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+  .btn-menu {
+    display: inline-block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu.menu-aberto {
+    display: flex;
+  }
+}
