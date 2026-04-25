@@ -346,3 +346,31 @@ body {
     display: flex;
   }
 }
+
+/* =========================
+
+   TABELA SIMPLES (IMC etc)
+
+   ========================= */
+.tabela-simples {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  background: white;
+}
+
+.tabela-simples th,
+.tabela-simples td {
+  border: 1px solid #e2e8f0;
+  padding: 12px;
+  text-align: left;
+}
+
+.tabela-simples th {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.tabela-simples tr:nth-child(even) {
+  background: #f8fafc;
+}
