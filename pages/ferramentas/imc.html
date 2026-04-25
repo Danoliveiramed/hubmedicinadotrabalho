@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Calculadora de IMC | Hub Medicina</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="topo">
+  <div class="container">
+    <h1>Calculadora de IMC</h1>
+    <p>Cálculo rápido do Índice de Massa Corporal</p>
+
+    <div id="menu-container"></div>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="bloco">
+    <h2>Calcular IMC</h2>
+    <p class="texto-apoio">
+      Informe peso e altura para calcular o IMC e ver a classificação.
+    </p>
+
+    <form id="formImc" class="formulario">
+      <div class="grid-2">
+        <div class="campo">
+          <label for="pesoImc">Peso (kg)</label>
+          <input type="number" id="pesoImc" placeholder="Ex.: 70" step="0.1" />
+        </div>
+
+        <div class="campo">
+          <label for="alturaImc">Altura (m)</label>
+          <input type="number" id="alturaImc" placeholder="Ex.: 1.75" step="0.01" />
+        </div>
+      </div>
+
+      <div class="acoes-formulario">
+        <button type="button" id="btnCalcularImc">Calcular</button>
+        <button type="button" id="btnLimparImc" class="btn-secundario">Limpar</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="bloco">
+    <h2>Resultado</h2>
+
+    <textarea id="resultadoImc" rows="6" placeholder="O resultado aparecerá aqui..."></textarea>
+
+    <div class="acoes-formulario">
+      <button type="button" id="btnCopiarImc">Copiar resultado</button>
+    </div>
+  </section>
+
+  <section class="bloco">
+    <h2>Classificação do IMC</h2>
+
+    <table class="tabela-simples">
+      <thead>
+        <tr>
+          <th>Classificação</th>
+          <th>Valor de referência</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Baixo peso</td>
+          <td>Menor que 18,5</td>
+        </tr>
+        <tr>
+          <td>Peso adequado</td>
+          <td>18,5 a 24,9</td>
+        </tr>
+        <tr>
+          <td>Sobrepeso</td>
+          <td>25,0 a 29,9</td>
+        </tr>
+        <tr>
+          <td>Obesidade grau I</td>
+          <td>30,0 a 34,9</td>
+        </tr>
+        <tr>
+          <td>Obesidade grau II</td>
+          <td>35,0 a 39,9</td>
+        </tr>
+        <tr>
+          <td>Obesidade grau III</td>
+          <td>40,0 ou mais</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<div id="footer-container"></div>
+
+<script src="/js/script.js"></script>
+<script src="/js/head.js"></script>
+<script>
+  carregarHead("Calculadora de IMC");
+  carregarMenu("ferramentas");
+  carregarFooter();
+</script>
+
+</body>
+</html>
