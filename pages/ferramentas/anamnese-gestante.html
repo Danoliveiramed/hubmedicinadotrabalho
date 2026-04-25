@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Anamnese de Gestante | Hub Medicina</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="topo">
+  <div class="container">
+    <h1>Anamnese de Gestante</h1>
+    <p>Assistente estruturado para pré-natal e avaliação gestacional</p>
+
+    <div id="menu-container"></div>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="bloco">
+    <h2>Dados da gestante</h2>
+
+    <form id="formAnamneseGestante" class="formulario">
+
+      <div class="grid-2">
+        <div class="campo">
+          <label for="gestNome">Nome / identificação</label>
+          <input type="text" id="gestNome" placeholder="Ex.: Maria da Silva" />
+        </div>
+
+        <div class="campo">
+          <label for="gestAcompanhante">Acompanhante / responsável</label>
+          <input type="text" id="gestAcompanhante" placeholder="Ex.: companheiro, mãe, sozinha" />
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="campo">
+          <label for="gestIdade">Idade</label>
+          <input type="text" id="gestIdade" placeholder="Ex.: 28 anos" />
+        </div>
+
+        <div class="campo">
+          <label for="gestProfissao">Profissão</label>
+          <input type="text" id="gestProfissao" placeholder="Ex.: professora, vendedora" />
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="gestPlanejada">Gestação planejada / desejada?</label>
+        <input type="text" id="gestPlanejada" placeholder="Ex.: planejada, desejada, não planejada" />
+      </div>
+
+      <div class="campo">
+        <label for="gestHistoriaAtual">História da gestação atual</label>
+        <textarea id="gestHistoriaAtual" rows="4" placeholder="Descreva a gestação atual"></textarea>
+        <p class="texto-apoio">Como descobriu, teste de farmácia/laboratorial, queixas atuais, náuseas, vômitos, dor, sangramento.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="campo">
+          <label for="gestDum">DUM</label>
+          <input type="text" id="gestDum" placeholder="Data da última menstruação" />
+        </div>
+
+        <div class="campo">
+          <label for="gestDpp">DPP</label>
+          <input type="text" id="gestDpp" placeholder="Data provável do parto" />
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="campo">
+          <label for="gestIg">Idade gestacional</label>
+          <input type="text" id="gestIg" placeholder="Ex.: 12 semanas e 3 dias" />
+        </div>
+
+        <div class="campo">
+          <label for="gestTipoSanguineo">Tipo sanguíneo</label>
+          <input type="text" id="gestTipoSanguineo" placeholder="Ex.: O+, A-" />
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="gestInterrogatorio">Interrogatório sintomatológico</label>
+        <textarea id="gestInterrogatorio" rows="4" placeholder="Sintomas relevantes"></textarea>
+        <p class="texto-apoio">Sintomas gerais e gestacionais: dor, sangramento, corrimento, febre, disúria, cefaleia, escotomas, edema, vômitos.</p>
+      </div>
+
+      <div class="campo">
+        <label for="gestAntecedentesPessoais">Antecedentes pessoais</label>
+        <textarea id="gestAntecedentesPessoais" rows="5" placeholder="Doenças e antecedentes relevantes"></textarea>
+        <p class="texto-apoio">HAS, diabetes, cardiopatia, pneumopatia, tireoide, ITU recorrente, transfusão, alergias, cartão vacinal.</p>
+      </div>
+
+      <div class="campo">
+        <label for="gestHistoriaObstetrica">História obstétrica</label>
+        <textarea id="gestHistoriaObstetrica" rows="5" placeholder="GPA, partos, abortos e intercorrências"></textarea>
+        <p class="texto-apoio">Gestações, partos, abortos, cesáreas, prematuridade, baixo peso, pré-natal anterior e intercorrências.</p>
+      </div>
+
+      <div class="campo">
+        <label for="gestAntecedentesFamiliares">Antecedentes familiares</label>
+        <textarea id="gestAntecedentesFamiliares" rows="3" placeholder="HAS, diabetes, pré-eclâmpsia/eclâmpsia"></textarea>
+        <p class="texto-apoio">Quem teve e qual condição: HAS, diabetes, pré-eclâmpsia, eclâmpsia ou outras doenças relevantes.</p>
+      </div>
+
+      <div class="campo">
+        <label for="gestMedicacoes">Medicações em uso</label>
+        <textarea id="gestMedicacoes" rows="3" placeholder="Ex.: ácido fólico, sulfato ferroso"></textarea>
+        <p class="texto-apoio">Qual, posologia, motivo, adesão e quem prescreveu.</p>
+      </div>
+
+      <div class="campo">
+        <label for="gestHabitos">Hábitos de vida</label>
+        <textarea id="gestHabitos" rows="4" placeholder="Hábitos relevantes"></textarea>
+        <p class="texto-apoio">Tabagismo, etilismo, drogas, atividade física, alimentação e mudança de peso.</p>
+      </div>
+
+      <div class="campo">
+        <label for="gestExameFisico">Exame físico geral</label>
+        <textarea id="gestExameFisico" rows="5" placeholder="Descreva exame físico geral"></textarea>
+        <p class="texto-apoio">Estado geral, hidratação, coloração, PA, FC, FR, temperatura, peso, altura, IMC, SpO₂.</p>
+      </div>
+
+      <div class="campo">
+        <label for="gestExameObstetrico">Exame obstétrico</label>
+        <textarea id="gestExameObstetrico" rows="5" placeholder="Descreva exame obstétrico"></textarea>
+        <p class="texto-apoio">Altura uterina, movimentação fetal, BCF, edema, Leopold, apresentação, situação e insinuação.</p>
+      </div>
+
+      <div class="campo">
+        <label for="gestMamasGineco">Mamas / exame ginecológico</label>
+        <textarea id="gestMamasGineco" rows="4" placeholder="Descreva se realizado ou indicado"></textarea>
+        <p class="texto-apoio">Exame das mamas, inspeção genital, especular, coleta de preventivo e toque vaginal quando indicado.</p>
+      </div>
+
+      <div class="campo">
+        <label for="gestExames">Exames complementares</label>
+        <textarea id="gestExames" rows="5" placeholder="Hemograma, sorologias, glicemia, ultrassom..."></textarea>
+        <p class="texto-apoio">Inclua data e resultados relevantes: hemograma, sorologias, glicemia, ultrassonografia, placenta, líquido amniótico.</p>
+      </div>
+
+      <div class="campo">
+        <label for="gestHipotese">Hipótese / impressão clínica</label>
+        <textarea id="gestHipotese" rows="3" placeholder="Ex.: gestação em acompanhamento pré-natal"></textarea>
+      </div>
+
+      <div class="campo">
+        <label for="gestConduta">Conduta / plano</label>
+        <textarea id="gestConduta" rows="4" placeholder="Descreva a conduta"></textarea>
+        <p class="texto-apoio">Cartão da gestante, exames, prescrição, orientações, sinais de alarme e retorno.</p>
+      </div>
+
+      <div class="acoes-formulario">
+        <button type="button" id="btnGerarResumoGestante">Gerar resumo</button>
+        <button type="button" id="btnGerarTextoGestante">Gerar texto clínico</button>
+        <button type="button" id="btnLimparGestante" class="btn-secundario">Limpar</button>
+      </div>
+
+    </form>
+  </section>
+
+  <section class="bloco">
+    <h2>Resultado</h2>
+    <textarea id="resultadoGestante" rows="18" placeholder="O resultado aparecerá aqui..."></textarea>
+
+    <div class="acoes-formulario">
+      <button type="button" id="btnCopiarGestante">Copiar texto</button>
+      <button type="button" id="btnWhatsappGestante" class="btn-secundario">Abrir no WhatsApp</button>
+    </div>
+  </section>
+
+</main>
+
+<div id="footer-container"></div>
+
+<script src="/js/script.js"></script>
+<script src="/js/head.js"></script>
+<script src="/js/anamnese-ocupacional.js"></script>
+<script>
+  carregarHead("Anamnese de Gestante");
+  carregarMenu("ferramentas");
+  carregarFooter();
+</script>
+
+</body>
+</html>
