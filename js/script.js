@@ -904,3 +904,63 @@ if (btnWhatsappResultadoGeral && resultadoAnamneseGeral) {
     window.open(url, "_blank");
   });
 }
+// Calculadora de IMC
+const btnCalcularImc = document.getElementById("btnCalcularImc");
+const btnLimparImc = document.getElementById("btnLimparImc");
+const btnCopiarImc = document.getElementById("btnCopiarImc");
+const resultadoImc = document.getElementById("resultadoImc");
+
+function classificarImc(imc) {
+  if (imc < 18.5) return "Baixo peso";
+  if (imc < 25) return "Peso adequado";
+  if (imc < 30) return "Sobrepeso";
+  if (imc < 35) return "Obesidade grau I";
+  if (imc < 40) return "Obesidade grau II";
+  return "Obesidade grau III";
+}
+
+if (btnCalcularImc && resultadoImc) {
+  btnCalcularImc.addEventListener("click", function () {
+    const peso = parseFloat(document.getElementById("pesoImc").value);
+    const altura = parseFloat(document.getElementById("alturaImc").value);
+
+    if (!peso || !altura || peso <= 0 || altura <= 0) {
+      alert("Informe peso e altura válidos.");
+      return;
+    }
+
+    const imc = peso / (altura * altura);
+    const imcFormatado = imc.toFixed(1).replace(".", ",");
+    const classificacao = classificarImc(imc);
+
+    resultadoImc.value =
+      `IMC: ${imcFormatado} kg/m²\n` +
+      `Classificação: ${classificacao}\n\n` +
+      `Peso informado: ${peso} kg\n` +
+      `Altura informada: ${altura} m`;
+  });
+}
+
+if (btnLimparImc) {
+  btnLimparImc.addEventListener("click", function () {
+    const form = document.getElementById("formImc");
+    if (form) form.reset();
+    if (resultadoImc) resultadoImc.value = "";
+  });
+}
+
+if (btnCopiarImc && resultadoImc) {
+  btnCopiarImc.addEventListener("click", async function () {
+    if (!resultadoImc.value.trim()) {
+      alert("Calcule o IMC antes de copiar.");
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(resultadoImc.value);
+      alert("Resultado copiado com sucesso.");
+    } catch (erro) {
+      alert("Não foi possível copiar automaticamente. Copie manualmente.");
+    }
+  });
+}
